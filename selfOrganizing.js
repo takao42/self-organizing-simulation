@@ -8,14 +8,12 @@ var startButton;
 var stopButton;
 var isGameStarted = false;
 
-var imagePath = 'https://rawgit.com/takao42/self-organizing-simulation/master/';
-
 // create game
 var game = new Phaser.Game(gameSize, gameSize+50, Phaser.AUTO, 'test-area', { preload: preload, create: create, update: update, render: render });
 
 function preload() {
-    game.load.spritesheet(imagePath+'startButton', 'startButton.png', 180, 60);
-    game.load.spritesheet(imagePath+'stopButton', 'stopButton.png', 180, 60);
+    game.load.spritesheet('startButton', 'startButton.png', 180, 60);
+    game.load.spritesheet('stopButton', 'stopButton.png', 180, 60);
 }
 
 function create() {
